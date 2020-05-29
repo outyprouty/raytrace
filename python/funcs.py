@@ -4,9 +4,11 @@ class vec3:
 
 	def __init__(self, x, y, z):
 		self.comps = [x,y,z]
+		self.x = x
+		self.y = y
+		self.z = z
 	
 	def __add__(self, other):
-		
 		return vec3(*[a+b for a,b in zip(self.comps,other.comps)])
 
 	def __sub__(self, other):
@@ -44,6 +46,10 @@ class ray:
 		discrim = B*B - 4*A*C
 
 		return discrim >= 0
+
+	
+
+
 
 
 
